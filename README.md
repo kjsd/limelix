@@ -2,9 +2,10 @@
 
 LIne MEssaging platform on ELIXer.
 
-Limelix is helpers of [LINE API SDK](https://hex.pm/packages/line_developers) and
-fully support [LINE Messaging API Rate limits Specifications](https://developers.line.biz/en/reference/messaging-api/#rate-limits) that can be used on multi LINE
-Official Accounts. 
+Limelix is helpers of [LINE API SDK](https://hex.pm/packages/line_developers) with
+fully support [LINE Messaging API Rate limits
+Specifications](https://developers.line.biz/en/reference/messaging-api/#rate-limits) and
+that can be used by multi LINE Official Accounts. 
 
 ## Installation
 
