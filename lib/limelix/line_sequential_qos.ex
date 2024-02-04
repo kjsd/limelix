@@ -19,7 +19,7 @@ defmodule Limelix.LINESequentialQoS do
       @impl Rpcsdk.Crawler
       def handle_crawling({sender, arg}, key, {interval, _}) do
         result = Enum.reduce_while(1..3, nil, fn n, _ ->
-          if n > 1, do: :timer.sleep(interval / 3)
+          if n > 1, do: :timer.sleep(interval)
 
           Endpoints
           |> apply(unquote(target_fn), [arg])
