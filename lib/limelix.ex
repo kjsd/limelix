@@ -84,11 +84,11 @@ defmodule Limelix do
     end
   end
 
-  def create_audience(access_token, description, [_|_] = uid, oa_id \\ "LIMELIX_LINEOA")
-  when is_binary(access_token) and is_binary(description) do
+  def create_audience(access_token, description, uids, oa_id \\ "LIMELIX_LINEOA")
+  when is_binary(access_token) and is_binary(description) and is_list(uids) do
     Narrowcasts.AudienceQueue.enqueue(oa_id, {
           self(), {:create_audience!, [
-                      access_token, description, uid]}})
+                      access_token, description, uids]}})
 
     receive do
       res ->

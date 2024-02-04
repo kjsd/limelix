@@ -20,7 +20,7 @@ defmodule Limelix.LINEQoS do
 
       @impl Rpcsdk.Crawler
       def handle_crawling({sender, arg}, key, {interval, _}) do
-        Limelix.Endpoints
+        Endpoints
         |> apply(unquote(target_fn), [arg])
         |> case do
              {:error, {429, _, _}} = x ->

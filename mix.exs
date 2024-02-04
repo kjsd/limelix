@@ -8,7 +8,7 @@ defmodule Limelix.MixProject do
   def project do
     [
       app: :limelix,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.14",
       description: @description,
       package: package(),
